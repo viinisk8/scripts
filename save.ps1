@@ -1,5 +1,17 @@
+#parameters
 param (
     $shortcut
 )
 
-(Get-Location).Path
+#imports
+. "$PSScriptRoot\Lib\Message.ps1"
+
+
+# -----------------------------------------------------------------------------
+if($shortcut -eq $null) { 
+    Error "empty parameter"
+    exit
+} 
+
+#$path=(Get-Location).Path
+
